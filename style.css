@@ -19,6 +19,25 @@ body {
   line-height: 1.6;
 }
 
+/*Toggle RTL */
+.rtl-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 8px 14px;
+  background: #0071c5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+html[dir="rtl"] .rtl-btn {
+  right: auto;
+  left: 15px;
+}
+
 /* HERO */
 .hero {
   background: linear-gradient(135deg, var(--intel-blue), var(--intel-dark));
@@ -113,6 +132,90 @@ body {
 .timeline-card:hover p {
   max-height: 300px;
   opacity: 1;
+}
+
+/* RTL adjustments */
+html[dir="rtl"] .timeline {
+  direction: rtl;
+}
+
+.container h2 {
+  font-weight: 700;
+}
+
+.container h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.container .btn-primary {
+  background: #0071c5;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.container .btn-primary:hover {
+  background: #005a9e;
+}
+
+/* RTL alignment */
+html[dir="rtl"] .container h3,
+html[dir="rtl"] .container p {
+  text-align: right;
+}
+
+/* --------------------------------------------------
+   SUBSCRIPTION FORM
+-------------------------------------------------- */
+.subscription-section {
+  background: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.subscription-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.subscription-section p {
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.subscription-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.subscription-form input {
+  padding: 10px;
+  width: 260px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.subscription-form button {
+  padding: 10px 18px;
+  background: #0071c5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.subscription-form button:hover {
+  background: #005a9e;
+}
+
+/* RTL alignment */
+html[dir="rtl"] .subscription-section p {
+  text-align: right;
 }
 
 /* FOOTER */
